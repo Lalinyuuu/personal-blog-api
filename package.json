@@ -1,18 +1,17 @@
 {
   "name": "personal-blog-api",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "vercel-dev": "npx vercel dev"
+    "dev": "vercel dev",
+    "start": "node index.js"
   },
   "dependencies": {
+    "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "serverless-http": "^4.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "pg": "^8.11.5",
+    "serverless-http": "^3.2.0"
   }
 }
