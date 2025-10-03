@@ -1,8 +1,4 @@
-const { Pool } = require("pg");
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: false, 
-});
-
-module.exports = { pool };
+import { Pool } from "pg";
+import { config } from "../config/env.js";
+export const pool = new Pool({ connectionString: config.dbUrl, ssl: { rejectUnauthorized: false } });
+export const query = (t, p) => pool.query(t, p);
