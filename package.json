@@ -4,9 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vercel dev",
     "build": "echo \"no build step\"",
-    "start": "vercel dev",
     "db:migrate": "node scripts/db-migrate.mjs"
   },
   "dependencies": {
